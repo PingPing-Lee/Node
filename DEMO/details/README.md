@@ -1,0 +1,1 @@
+ 本目录下的代码属于后台服务，在BFF架构里可以不是Node.js实现的部分。用node start.js启动即可启动方式: 进入client目录和server目录分别启动node进程，然后浏览器访问 localhost:3000?column=3
