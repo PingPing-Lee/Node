@@ -1,0 +1,707 @@
+Statistical profiling result from isolate-0x7fda6b400000-4077-v8.log, (1282 ticks, 3 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     36    2.8%          /usr/lib/system/libsystem_pthread.dylib
+     17    1.3%          /usr/lib/system/libsystem_malloc.dylib
+     13    1.0%          /usr/lib/system/libsystem_platform.dylib
+     12    0.9%          /usr/lib/system/libsystem_c.dylib
+     12    0.9%          /usr/lib/libc++.1.dylib
+      5    0.4%          /usr/lib/system/libsystem_kernel.dylib
+      3    0.2%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.5%    0.5%  LazyCompile: *resolve node:path:1091:10
+      2    0.2%    0.2%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:701:37
+      2    0.2%    0.2%  Function: ^validateString node:internal/validators:160:24
+      1    0.1%    0.1%  LazyCompile: *normalizeString node:path:66:25
+      1    0.1%    0.1%  Function: ^trySelf node:internal/modules/cjs/loader:513:17
+      1    0.1%    0.1%  Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      1    0.1%    0.1%  Function: ^maybeCacheSourceMap node:internal/source_map/source_map_cache:80:29
+      1    0.1%    0.1%  Function: ^isURLInstance node:internal/url:1508:23
+      1    0.1%    0.1%  Function: ^compileFunction node:vm:316:25
+      1    0.1%    0.1%  Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      1    0.1%    0.1%  Function: ^Module._resolveLookupPaths node:internal/modules/cjs/loader:739:38
+      1    0.1%    0.1%  Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1    0.1%    0.1%  Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1    0.1%    0.1%  Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1    0.1%    0.1%  Function: ^<anonymous> node:internal/validators:93:3
+
+ [C++]:
+   ticks  total  nonlib   name
+    300   23.4%   25.3%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    259   20.2%   21.9%  t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    240   18.7%   20.3%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    101    7.9%    8.5%  T node::builtins::BuiltinEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     71    5.5%    6.0%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     55    4.3%    4.6%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     32    2.5%    2.7%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     31    2.4%    2.6%  T _host_request_notification
+     16    1.2%    1.4%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.7%    0.8%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      8    0.6%    0.7%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.4%    0.4%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.4%    0.4%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      4    0.3%    0.3%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      4    0.3%    0.3%  T _shm_open
+      4    0.3%    0.3%  T __kernelrpc_mach_port_get_context
+      3    0.2%    0.3%  T _host_get_special_port
+      2    0.2%    0.2%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.2%    0.2%  T node::fs::Access(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.2%    0.2%  T node::contextify::ContextifyContext::MakeContext(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T _posix_spawn
+      1    0.1%    0.1%  T _mach_msg_destroy
+      1    0.1%    0.1%  T _mach_get_times
+
+ [Summary]:
+   ticks  total  nonlib   name
+     22    1.7%    1.9%  JavaScript
+   1159   90.4%   97.9%  C++
+     30    2.3%    2.5%  GC
+     98    7.6%          Shared libraries
+      3    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1196   99.8%   93.3%  t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    0.1%    0.1%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T _posix_spawn
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    300   23.4%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    300  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    292   97.3%      Function: ^readSync node:fs:695:18
+    292  100.0%        Function: ^tryReadSync node:fs:434:21
+    291   99.7%          Function: ^readFileSync node:fs:455:22
+    272   93.5%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+     16    5.5%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      8    2.7%      LazyCompile: ~readSync node:fs:695:18
+      8  100.0%        LazyCompile: ~tryReadSync node:fs:434:21
+      8  100.0%          LazyCompile: ~readFileSync node:fs:455:22
+      8  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+
+    259   20.2%  t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    142   54.8%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     23   16.2%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      6   26.1%        Function: ^readPackage node:internal/modules/cjs/loader:351:21
+      6  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:393:26
+      4   66.7%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      2   33.3%            Function: ^trySelf node:internal/modules/cjs/loader:513:17
+      2    8.7%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:400:36
+      2  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:468:30
+      1   50.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:468:30
+      1   50.0%            LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:574:31
+      2    8.7%        Function: ^FastBuffer node:internal/buffer:958:14
+      2  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      2  100.0%            Function: ^allocate node:buffer:403:18
+      1    4.3%        LazyCompile: ~resolvePresets /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/file/options/option-manager.js:274:67
+      1  100.0%          LazyCompile: ~mergePresets /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/file/options/option-manager.js:261:63
+      1  100.0%            LazyCompile: ~mergeOptions /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/file/options/option-manager.js:190:63
+      1    4.3%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:544:24
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1    4.3%        LazyCompile: ~populateConstructorExports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/http-errors/index.js:264:37
+      1  100.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/http-errors/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1    4.3%        LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers-schema/tokenize.js:1:27
+      1  100.0%          LazyCompile: ~parse /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers-schema/parse.js:621:22
+      1  100.0%            LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/index.js:14:27
+      1    4.3%        LazyCompile: ~line.toFunction /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:155:29
+      1  100.0%          LazyCompile: ~compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%            LazyCompile: ~resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      1    4.3%        LazyCompile: ~isProperty /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/is-property/is-property.js:2:20
+      1  100.0%          LazyCompile: ~gen /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-object-property/index.js:3:19
+      1  100.0%            LazyCompile: ~forEach /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:206:28
+      1    4.3%        LazyCompile: ~exports.default /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-template/lib/index.js:9:28
+      1  100.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-helpers/lib/helpers.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1    4.3%        LazyCompile: ~codeClass /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/resolve-path/node_modules/http-errors/index.js:36:20
+      1  100.0%          LazyCompile: ~forEachCode /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/resolve-path/node_modules/http-errors/index.js:226:38
+      1  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    4.3%        Function: ^toIdentifier /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/toidentifier/index.js:24:23
+      1  100.0%          LazyCompile: ~forEachCode /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/raw-body/node_modules/http-errors/index.js:259:38
+      1  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    4.3%        Function: ^stat node:internal/modules/cjs/loader:175:14
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:472:23
+      1    4.3%        Function: ^realpathSync node:fs:2455:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:465:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      1    4.3%        Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:106:31
+      1    4.3%        Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+     12    8.5%      Function: ^readPackage node:internal/modules/cjs/loader:351:21
+      7   58.3%        Function: ^resolveExports node:internal/modules/cjs/loader:544:24
+      7  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      7  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      3   25.0%        Function: ^readPackageScope node:internal/modules/cjs/loader:393:26
+      2   66.7%          Function: ^trySelf node:internal/modules/cjs/loader:513:17
+      2  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1   33.3%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      2   16.7%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:544:24
+      2  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      4    2.8%      Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      4  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      4  100.0%          Function: ^require node:internal/modules/cjs/helpers:106:31
+      1   25.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/resolve-path/node_modules/http-errors/index.js:1:1
+      1   25.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/react-dom/server.node.js:1:1
+      1   25.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/koa-graphql/dist/index.js:1:1
+      1   25.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-generator/lib/index.js:1:1
+      3    2.1%      Function: ^toRealPath node:internal/modules/cjs/loader:465:20
+      3  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      3  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:472:23
+      3  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      3    2.1%      Function: ^Module._resolveLookupPaths node:internal/modules/cjs/loader:739:38
+      3  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      2    1.4%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    1.4%      LazyCompile: ~_loop2 /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-traverse/lib/path/index.js:194:29
+      2  100.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-traverse/lib/path/index.js:1:1
+      2  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      2    1.4%      LazyCompile: ~WriteStream node:tty:85:21
+      2  100.0%        LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1   50.0%          LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      1  100.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/supports-color/index.js:1:1
+      1   50.0%          LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/supports-color/index.js:1:1
+      2    1.4%      LazyCompile: ~Module._load node:internal/modules/cjs/loader:837:24
+      1   50.0%        LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   50.0%        Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:106:31
+      1  100.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/koa/lib/response.js:1:1
+      2    1.4%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1255:39
+      2  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      2  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:837:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      2    1.4%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/react-dom/cjs/react-dom-server.node.development.js:15:12
+      2  100.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/react-dom/cjs/react-dom-server.node.development.js:1:1
+      2  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      2    1.4%      Function: ^stat node:internal/modules/cjs/loader:175:14
+      1   50.0%        Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:472:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1   50.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      2    1.4%      Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      2  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+     10    3.9%    Function: ^readPackage node:internal/modules/cjs/loader:351:21
+      9   90.0%      Function: ^readPackageScope node:internal/modules/cjs/loader:393:26
+      6   66.7%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      6  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      6  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      3   33.3%        Function: ^trySelf node:internal/modules/cjs/loader:513:17
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      1   10.0%      Function: ^resolveExports node:internal/modules/cjs/loader:544:24
+      1  100.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      8    3.1%    Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      8  100.0%      Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      8  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      8  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      8  100.0%            Function: ^require node:internal/modules/cjs/helpers:106:31
+      5    1.9%    Function: ^toString node:buffer:790:46
+      5  100.0%      Function: ^readFileSync node:fs:455:22
+      5  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      5  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      5  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      5    1.9%    Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      5  100.0%      Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      5  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      5  100.0%          Function: ^require node:internal/modules/cjs/helpers:106:31
+      1   20.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/_getSymbolsIn.js:1:1
+      1   20.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/_baseUniq.js:1:1
+      1   20.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/validation/specifiedRules.js:1:1
+      1   20.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/utilities/valueFromASTUntyped.js:1:1
+      1   20.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/file/index.js:1:1
+      5    1.9%    Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      5  100.0%      Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      5  100.0%        Function: ^require node:internal/modules/cjs/helpers:106:31
+      1   20.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/keygrip/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1   20.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/utilities/valueFromASTUntyped.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1   20.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/type/scalars.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1   20.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/modules/_array-species-create.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1   20.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-code-frame/lib/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      4    1.5%    Function: ^readFileSync node:fs:455:22
+      4  100.0%      Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      4  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      4  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      4  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+      3    1.2%    Function: ^tryReadSync node:fs:434:21
+      3  100.0%      Function: ^readFileSync node:fs:455:22
+      3  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      3  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      3    1.2%    Function: ^toRealPath node:internal/modules/cjs/loader:465:20
+      3  100.0%      Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      3  100.0%        Function: ^tryExtensions node:internal/modules/cjs/loader:472:23
+      3  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      3  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      3    1.2%    Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      3  100.0%      Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      3  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+
+    240   18.7%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    240  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+    236   98.3%      Function: ^compileFunction node:vm:316:25
+    230   97.5%        Function: ^wrapSafe node:internal/modules/cjs/loader:1109:18
+    228   99.1%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+    215   94.3%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+     11    4.8%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      6    2.5%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1109:18
+      6  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1149:37
+      6  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      4    1.7%      LazyCompile: ~compileFunction node:vm:316:25
+      4  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1109:18
+      4  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1149:37
+      4  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+
+    101    7.9%  T node::builtins::BuiltinEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    101  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     72   71.3%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     56   77.8%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+     14   25.0%          Function: ~<anonymous> node:crypto:1:1
+     14  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    8.9%          Function: ~<anonymous> node:http:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    5.4%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    5.4%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    5.4%          Function: ~<anonymous> node:child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    5.4%          Function: ~<anonymous> node:_http_client:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.6%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      2  100.0%            LazyCompile: ~get node:crypto:294:8
+      2    3.6%          LazyCompile: ~lazyLoadStreams node:fs:2888:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:3031:17
+      2    3.6%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.6%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.6%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.6%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.6%          Function: ~<anonymous> node:cluster:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.6%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.6%          Function: ~<anonymous> node:_http_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.8%          LazyCompile: ~get BlockList node:net:1957:16
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      1    1.8%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.8%          Function: ~<anonymous> node:module:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.8%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.8%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.8%          Function: ~<anonymous> node:internal/crypto/cipher:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.8%          Function: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     10   13.9%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      6   60.0%          LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:49:27
+      6  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:837:24
+      4   40.0%          Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:49:27
+      4  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      6    8.3%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      6  100.0%          Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:49:27
+      6  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+     29   28.7%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     26   89.7%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      5   19.2%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      5  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4   15.4%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      4  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      4   15.4%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4   15.4%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    7.7%          Function: ~<anonymous> node:net:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    7.7%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:560:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    3.8%          LazyCompile: ~initializeReport node:internal/bootstrap/pre_execution:278:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    3.8%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3   10.3%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2   66.7%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   33.3%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:329:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+
+     71    5.5%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     71  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     58   81.7%      Function: ^read node:internal/modules/package_json_reader:16:14
+     58  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:351:21
+     46   79.3%          Function: ^resolveExports node:internal/modules/cjs/loader:544:24
+     46  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      9   15.5%          Function: ^readPackageScope node:internal/modules/cjs/loader:393:26
+      7   77.8%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      2   22.2%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      2    3.4%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:544:24
+      2  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1    1.7%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:410:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+     13   18.3%      LazyCompile: ~read node:internal/modules/package_json_reader:16:14
+      7   53.8%        Function: ^readPackage node:internal/modules/cjs/loader:351:21
+      6   85.7%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:544:24
+      3   50.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      3   50.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1   14.3%          Function: ^readPackageScope node:internal/modules/cjs/loader:393:26
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      6   46.2%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:351:21
+      4   66.7%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:544:24
+      4  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      2   33.3%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:393:26
+      1   50.0%            LazyCompile: ~shouldUseESMLoader node:internal/modules/run_main:30:28
+      1   50.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+
+     55    4.3%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     55  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     51   92.7%      Function: ^stat node:internal/modules/cjs/loader:175:14
+     32   62.7%        Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+     30   93.8%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+     30  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      2    6.3%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:837:24
+     17   33.3%        Function: ^tryFile node:internal/modules/cjs/loader:456:17
+     17  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:472:23
+     16   94.1%            Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1    5.9%            Function: ^tryPackage node:internal/modules/cjs/loader:410:20
+      2    3.9%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      2  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:837:24
+      4    7.3%      LazyCompile: ~stat node:internal/modules/cjs/loader:175:14
+      3   75.0%        LazyCompile: ~tryFile node:internal/modules/cjs/loader:456:17
+      3  100.0%          LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:472:23
+      2   66.7%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      1   33.3%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:410:20
+      1   25.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:837:24
+
+     36    2.8%  /usr/lib/system/libsystem_pthread.dylib
+     34   94.4%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      4   11.8%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      4  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      4   11.8%      LazyCompile: ~getCheckedFunction node:os:63:28
+      4  100.0%        Function: ~<anonymous> node:os:1:1
+      4  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      3    8.8%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:465:20
+      3  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      3  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      3  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      3    8.8%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      3  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      3  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      3    8.8%      LazyCompile: ~line /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:115:22
+      3  100.0%        LazyCompile: ~compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      3  100.0%          LazyCompile: ~resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      3  100.0%            LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:194:37
+      2    5.9%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      2  100.0%        LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      2  100.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/supports-color/index.js:1:1
+      2  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1149:37
+      1    2.9%      LazyCompile: ~resolve node:path:1091:10
+      1  100.0%        LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.9%      LazyCompile: ~realpathSync node:fs:2455:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:465:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    2.9%      LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/modules/_set-to-string-tag.js:5:27
+      1  100.0%        LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/modules/_iter-create.js:10:27
+      1  100.0%          LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/modules/_iter-define.js:18:27
+      1  100.0%            Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/modules/es6.string.iterator.js:1:1
+      1    2.9%      LazyCompile: ~load /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/cache.js:51:14
+      1  100.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1    2.9%      LazyCompile: ~filterOwnProperties node:internal/util:529:29
+      1  100.0%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:351:21
+      1  100.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:544:24
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:566:28
+      1    2.9%      LazyCompile: ~ReadableState node:internal/streams/readable:78:23
+      1  100.0%        LazyCompile: ~Readable node:internal/streams/readable:181:18
+      1  100.0%          LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%            LazyCompile: ~Socket node:net:317:16
+      1    2.9%      LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%        LazyCompile: ~Socket node:net:317:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1    2.9%      LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/type/definition.js:963:61
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          LazyCompile: ~defineEnumValues /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/type/definition.js:961:26
+      1  100.0%            LazyCompile: ~GraphQLEnumType /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/type/definition.js:868:27
+      1    2.9%      Function: ~<anonymous> node:zlib:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%            Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:49:27
+      1    2.9%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1    2.9%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/supports-color/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1062:33
+      1    2.9%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/http-errors/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    2.9%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-code-frame/node_modules/chalk/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    2.9%      Function: ^readPackage node:internal/modules/cjs/loader:351:21
+      1  100.0%        Function: ^resolveExports node:internal/modules/cjs/loader:544:24
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1    2.9%      Function: ^line.toFunction /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:155:29
+      1  100.0%        Function: ^compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%          Function: ^resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      1  100.0%            LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:528:75
+
+     32    2.5%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     32  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     32  100.0%      LazyCompile: ~Script node:vm:66:14
+     32  100.0%        LazyCompile: ~createScript node:vm:264:22
+     32  100.0%          LazyCompile: ~runInContext node:vm:286:22
+     17   53.1%            LazyCompile: ~createTemplate /Users/muzi/my/study/NodeJS/code/chapter3/2.detail/template/index.js:13:24
+     15   46.9%            LazyCompile: ~createTemplate /Users/muzi/my/study/NodeJS/code/chapter3/4.list/node/template.js:8:24
+
+     31    2.4%  T _host_request_notification
+     22   71.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      3   13.6%      Function: ^line.toFunction /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:155:29
+      3  100.0%        Function: ^compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      3  100.0%          Function: ^resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      1   33.3%            LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:528:75
+      1   33.3%            Function: ^<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:528:75
+      1   33.3%            Function: ^<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:194:37
+      2    9.1%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1   50.0%        LazyCompile: ~stringify /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/fn/json/stringify.js:3:36
+      1  100.0%          LazyCompile: ~compile /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/node.js:100:17
+      1  100.0%            LazyCompile: ~loader /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/node.js:143:16
+      1   50.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1    4.5%      LazyCompile: ~resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      1  100.0%        LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:528:75
+      1  100.0%          t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%            LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:79:27
+      1    4.5%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.5%      LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/easy_sock/lib/easy_sock.js:13:41
+      1  100.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/2.detail/client.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1    4.5%      LazyCompile: ~module.exports /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/modules/_shared-key.js:3:27
+      1  100.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/core-js/library/modules/_object-keys-internal.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1    4.5%      LazyCompile: ~inherits node:util:235:18
+      1  100.0%        LazyCompile: ~createClientErrorConstructor /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/http-errors/index.js:133:39
+      1  100.0%          LazyCompile: ~forEachCode /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/http-errors/index.js:265:38
+      1  100.0%            t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1    4.5%      LazyCompile: ~getCheckedFunction node:os:63:28
+      1  100.0%        Function: ~<anonymous> node:os:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1    4.5%      LazyCompile: ~depd /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/resolve-path/node_modules/depd/index.js:105:15
+      1  100.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/resolve-path/node_modules/http-errors/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1    4.5%      LazyCompile: ~allocate node:buffer:403:18
+      1  100.0%        LazyCompile: ~allocUnsafe node:buffer:378:42
+      1  100.0%          LazyCompile: ~tryCreateBuffer node:fs:419:25
+      1  100.0%            LazyCompile: ~readFileSync node:fs:455:22
+      1    4.5%      LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1  100.0%        LazyCompile: ~Module._load node:internal/modules/cjs/loader:837:24
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.5%      LazyCompile: ~<anonymous> node:internal/validators:262:39
+      1  100.0%        LazyCompile: ~compileFunction node:vm:316:25
+      1  100.0%          LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1109:18
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1149:37
+      1    4.5%      Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      1    4.5%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    4.5%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1    4.5%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/isArguments.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    4.5%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/http-errors/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    4.5%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-plugin-transform-react-display-name/lib/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            LazyCompile: ~require.extensions.<computed> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/node.js:150:38
+      1    4.5%      Function: ^<anonymous> node:internal/validators:399:42
+      1  100.0%        Function: ^compileFunction node:vm:316:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1109:18
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+
+     17    1.3%  /usr/lib/system/libsystem_malloc.dylib
+     16   94.1%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      5   31.3%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      3   60.0%        Function: ^readPackage node:internal/modules/cjs/loader:351:21
+      3  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:393:26
+      3  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1   20.0%        LazyCompile: ~compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%          LazyCompile: ~resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      1  100.0%            LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:194:37
+      1   20.0%        Function: ^stat node:internal/modules/cjs/loader:175:14
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:472:23
+      1    6.3%      LazyCompile: ~serve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/koa-static/index.js:28:16
+      1  100.0%        Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/1.download/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1    6.3%      LazyCompile: ~save /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/cache.js:32:14
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    6.3%      LazyCompile: ~line /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:115:22
+      1  100.0%        LazyCompile: ~compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%          LazyCompile: ~resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      1  100.0%            LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:194:37
+      1    6.3%      LazyCompile: ~baseMergeDeep /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/_baseMergeDeep.js:32:23
+      1  100.0%        LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/_baseMerge.js:24:27
+      1  100.0%          LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/_createBaseFor.js:9:18
+      1  100.0%            LazyCompile: ~baseMerge /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/_baseMerge.js:20:19
+      1    6.3%      LazyCompile: ~baseClone /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/_baseClone.js:90:19
+      1  100.0%        LazyCompile: ~cloneDeep /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/lodash/cloneDeep.js:25:19
+      1  100.0%          LazyCompile: ~compile /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/node.js:100:17
+      1  100.0%            LazyCompile: ~loader /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/node.js:143:16
+      1    6.3%      LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/koa-static/node_modules/debug/src/node.js:43:64
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/koa-static/node_modules/debug/src/node.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1    6.3%      LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/type/definition.js:627:52
+      1  100.0%        LazyCompile: ~mapValue /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/jsutils/mapValue.js:16:18
+      1  100.0%          LazyCompile: ~defineFieldMap /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/type/definition.js:624:24
+      1  100.0%            LazyCompile: ~getFields /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/type/definition.js:577:41
+      1    6.3%      LazyCompile: *realpathSync node:fs:2455:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:465:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:456:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:472:23
+      1    6.3%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/cookies/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    6.3%      Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/internal-plugins/block-hoist.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    6.3%      Function: ^Module._findPath node:internal/modules/cjs/loader:566:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:935:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:837:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1090:36
+
+     16    1.2%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     16  100.0%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+     15   93.8%      Function: ^openSync node:fs:581:18
+     14   93.3%        Function: ^readFileSync node:fs:455:22
+     12   85.7%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+     12  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    7.1%          LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1255:39
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    7.1%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1    6.7%        LazyCompile: ~writeFileSync node:fs:2191:23
+      1  100.0%          LazyCompile: ~save /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-register/lib/cache.js:32:14
+      1  100.0%            LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    6.3%      LazyCompile: ~openSync node:fs:581:18
+      1  100.0%        LazyCompile: ~readFileSync node:fs:455:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1062:33
+
+     13    1.0%  /usr/lib/system/libsystem_platform.dylib
+      9   69.2%    t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      3   33.3%      Function: ^line.toFunction /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:155:29
+      2   66.7%        Function: ^compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      2  100.0%          Function: ^resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      2  100.0%            Function: ^<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:528:75
+      1   33.3%        LazyCompile: ~compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%          Function: ^resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+      1  100.0%            LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:528:75
+      1   11.1%      t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%        Function: ^readPackageScope node:internal/modules/cjs/loader:393:26
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1205:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1062:33
+      1   11.1%      LazyCompile: ~value node:internal/console/constructor:230:20
+      1  100.0%        LazyCompile: ~initializeGlobalConsole node:internal/console/constructor:687:33
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1   11.1%      LazyCompile: ~normaliseVisitor /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/plugin.js:135:64
+      1  100.0%        LazyCompile: ~Plugin /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/plugin.js:54:18
+      1  100.0%          Function: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/babel-core/lib/transformation/internal-plugins/block-hoist.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1149:37
+      1   11.1%      LazyCompile: ~<anonymous> /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/validation/validate.js:90:37
+      1  100.0%        t std::__1::enable_if<(__is_forward_iterator<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::value) && (is_constructible<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::iterator_traits<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >::reference>::value), std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::type std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::insert<std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*> >(std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>, std::__1::__wrap_iter<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const*>)
+      1  100.0%          LazyCompile: ~validateSDL /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/validation/validate.js:84:21
+      1  100.0%            LazyCompile: ~assertValidSDL /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/graphql/validation/validate.js:104:24
+      1   11.1%      Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:560:38
+      1   11.1%      Function: ^line.toString /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:151:27
+      1  100.0%        Function: ^line.toFunction /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/generate-function/index.js:155:29
+      1  100.0%          LazyCompile: ~compileMessage /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%            Function: ^resolve /Users/muzi/my/study/NodeJS/code/chapter3/node_modules/protocol-buffers/compile.js:505:26
+

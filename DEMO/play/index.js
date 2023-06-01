@@ -4,7 +4,6 @@ const mount = require('koa-mount');
 const static = require('koa-static');
 const graphqlHTTP = require('koa-graphql');
 
-
 const schema = require('./schema');
 
 const app = new koa();
